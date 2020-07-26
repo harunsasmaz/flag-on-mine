@@ -47,8 +47,6 @@ enum DIR_Y
 	DOWN = 1
 };
 
-const std::string endl = "\n";
-
 using KEY = char;
 
 enum KEYS
