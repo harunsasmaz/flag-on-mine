@@ -27,3 +27,12 @@ Historically famous game, Minesweeper, is now available to play on your terminal
 | <kbd>S</kbd>      | Sweep the Cell |
 
 * You can also see the gameplay on the game screen, there are other options but primarily this keys are enough to play.
+
+## Difficulty Levels
+
+| Level | # Mines | Size |
+| ------ | -----  | ----- |
+| Beginner  | 10   | 9x9 |
+| Intermediate  | 40  | 16x16 |
+| Expert    | 99  | 16x30 |
+| Custom  |  ?  | ? |
