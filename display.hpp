@@ -7,11 +7,12 @@
 #include "sevseg.hpp"
 #include "color.hpp"
 
+using namespace std;
 
 void dispBanner()
 { //will be moved to separate header later
-    std::cout << blue_fg;
-    std::cout << R"(
+    cout << blue_fg;
+    cout << R"(
     ##     ##  ##  ##    ## ########  ######  ##      ## ######## ######## ########  ######## ########
     ###   ###  ##  ###   ## ##       ##    ## ##  ##  ## ##       ##       ##     ## ##       ##     ##
     #### ####  ##  ####  ## ##       ##       ##  ##  ## ##       ##       ##     ## ##       ##     ##
@@ -19,7 +20,7 @@ void dispBanner()
     ##     ##  ##  ##  #### ##             ## ##  ##  ## ##       ##       ##        ##       ##   ##
     ##     ##  ##  ##   ### ##       ##    ## ##  ##  ## ##       ##       ##        ##       ##    ##
     ##     ##  ##  ##    ## ########  ######   ###  ###  ######## ######## ##        ######## ##     ##)";
-    std::cout << reset << "\n";
+    cout << reset << "\n";
 }
 
 void dispFlagCounter()
@@ -80,26 +81,26 @@ void setGameMode()
     do
     {
         dispBanner();
-        std::cout << std::setw(30);
-        std::cout << yellow_fg << "Maximise Terminal or press F11 for the optimal experience" << reset;
-        std::cout << "\n"
+        cout << setw(30);
+        cout << yellow_fg << "Maximise Terminal or press F11 for the optimal experience" << reset;
+        cout << "\n"
                   << "\n";
-        std::cout << std::setw(30);
-        std::cout << white_fg << "Choose Game Mode:\n";
-        std::cout << std::setw(30);
-        std::cout << green_fg << "1. Beginner\n";
-        std::cout << std::setw(30);
-        std::cout << yellow_fg << "2. Intermediate\n";
-        std::cout << std::setw(30);
-        std::cout << red_fg << "3. Expert\n";
-        std::cout << std::setw(30);
-        std::cout << blue_fg << "4. Custom\n\n";
-        std::cout << "                       ";
-        std::cin >> ch;
+        cout << setw(30);
+        cout << white_fg << "Choose Game Mode:\n";
+        cout << setw(30);
+        cout << green_fg << "1. Beginner\n";
+        cout << setw(30);
+        cout << yellow_fg << "2. Intermediate\n";
+        cout << setw(30);
+        cout << red_fg << "3. Expert\n";
+        cout << setw(30);
+        cout << blue_fg << "4. Custom\n\n";
+        cout << "                       ";
+        cin >> ch;
 
         if (ch < 1 || ch > 4)
         {
-            std::cout << red_fg << "Invalid Choice. Try again\n";
+            cout << red_fg << "Invalid Choice. Try again\n";
             auto c = getch();
         }
         else
@@ -116,27 +117,27 @@ void getQuickClearSettings()
     do
     {
         dispBanner();
-        std::cout << "\n";
-        std::cout << yellow_fg << 
+        cout << "\n";
+        cout << yellow_fg << 
         R"(            Quick Clear : If a cell with a number on it is already revealed,
                          and it's neighbours have been flagged with the same number,
                          then all tiles adjacent to this cell are also sweeped.
             
             Enable Quick Clear? )";
         
-        std::cout << white_fg << "[" << green_fg <<"Y" << white_fg << " / " << red_fg << "N" << white_fg << "] : " << reset;
+        cout << white_fg << "[" << green_fg <<"Y" << white_fg << " / " << red_fg << "N" << white_fg << "] : " << reset;
 
-        std::cin >> ch;
+        cin >> ch;
 
-        ch = std::tolower(ch);
+        ch = tolower(ch);
 
         if (!(ch == 'y' || ch == 'n'))
         {
-            std::cout << red_fg << "Invalid Choice. Try again\n";
+            cout << red_fg << "Invalid Choice. Try again\n";
             auto c = getch();
         }
         else
-            QUICKCLEAR = std::tolower(ch) == 'y' ? true : false;
+            QUICKCLEAR = tolower(ch) == 'y' ? true : false;
         
         system("clear");
 
