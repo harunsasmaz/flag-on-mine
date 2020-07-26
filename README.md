@@ -36,3 +36,9 @@ Historically famous game, Minesweeper, is now available to play on your terminal
 | Intermediate  | 40  | 16x16 |
 | Expert    | 99  | 16x30 |
 | Custom  |  ?  | ? |
+
+## Game Screen
+
+| Select Difficulty | Start Game | Game Over |
+| ------ | -----  | ----- |
+| ![](assets/difficulty.png)  | ![](assets/gamestart.png)   | ![](assets/gameover.png) |
