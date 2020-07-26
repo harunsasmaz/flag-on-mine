@@ -39,10 +39,14 @@ Historically famous game, Minesweeper, is now available to play on your terminal
 
 ## Game Screen
 
-| ------ |
-| Select Difficulty Level |
-| ![](assets/difficulty.png)  |
-| Start Game |
-| ![](assets/gamestart.png)   |
-| Play Game && Game Over |
-| ![](assets/gameover.png)    |
+<h3> Select Difficulty Level </h3>
+
+![](assets/difficulty.png)
+
+<h3> Start Game </h3>
+
+![](assets/gamestart.png)
+
+<h3> Play Game && Game Over </h3>
+
+![](assets/gameover.png)
